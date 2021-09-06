@@ -1,20 +1,8 @@
 package cinema.models;
 
-public class Token {
+import lombok.Getter;
+
+public final class Token {
+    @Getter
     private String token;
-
-    public Token(String token) {
-        this.token = token;
-    }
-
-    public Token() {
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getToken() {
-        return token;
-    }
 }

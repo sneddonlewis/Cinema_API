@@ -1,11 +1,14 @@
 package cinema.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Getter;
 
 import java.util.UUID;
 
-public class Ticket {
+public final class Ticket {
+    @Getter
     private final UUID token;
+    @Getter
     private final Seat ticket;
 
     {
@@ -14,14 +17,6 @@ public class Ticket {
 
     public Ticket(Seat ticket) {
         this.ticket = ticket;
-    }
-
-    public UUID getToken() {
-        return token;
-    }
-
-    public Seat getTicket() {
-        return ticket;
     }
 
     @JsonIgnore

@@ -2,16 +2,20 @@ package cinema.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
 
 
-public class Cinema {
+public final class Cinema {
     private final static int DEFAULT_ROWS = 9;
     private final static int DEFAULT_COLUMNS = 9;
 
+    @Getter
     @JsonProperty("total_rows")
     private final int totalRows;
+    @Getter
     @JsonProperty("total_columns")
     private final int totalColumns;
+    @Getter
     @JsonProperty("available_seats")
     private Seat[] availableSeats;
 
@@ -47,18 +51,6 @@ public class Cinema {
                 row++;
             }
         }
-    }
-
-    public Seat[] getAvailableSeats() {
-        return availableSeats;
-    }
-
-    public int getTotalRows() {
-        return totalRows;
-    }
-
-    public int getTotalColumns() {
-        return totalColumns;
     }
 
     public boolean purchaseSeat(int index) {

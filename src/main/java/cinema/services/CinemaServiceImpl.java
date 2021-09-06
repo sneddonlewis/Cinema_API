@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.UUID;
 
 @Service
-public class CinemaServiceImpl implements CinemaService{
+public final class CinemaServiceImpl implements CinemaService{
     private static final Cinema cinema;
     private static final Map<UUID, Ticket> purchases;
 
