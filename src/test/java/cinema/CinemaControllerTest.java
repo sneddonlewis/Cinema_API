@@ -1,18 +1,22 @@
 package cinema;
 
+import cinema.controllers.CinemaController;
 import cinema.models.Cinema;
 import cinema.models.Seat;
 import cinema.services.CinemaService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -26,6 +30,8 @@ public class CinemaControllerTest {
     private CinemaService service;
     @Autowired
     private MockMvc mockMvc;
+    @InjectMocks
+    private CinemaController cinemaController;
 
     @Test
     @DisplayName("Get available seats")
@@ -40,7 +46,12 @@ public class CinemaControllerTest {
 
 //    @Test
 //    @DisplayName("Get stats passing password with no sales")
-//    void getStats() {
-//
+//    void getStats() throws Exception {
+//        mockMvc = MockMvcBuilders.standaloneSetup(cinemaController).build();
+//        mockMvc.perform(MockMvcRequestBuilders.get("/stats?password=super_secret"))
+//                .andExpect(status().isOk())
+//                .andExpect(jsonPath("$.current_income", is(0)))
+//                .andExpect(jsonPath("$.number_of_available_seats", is(81)))
+//                .andExpect(jsonPath("$.number_of_purchased_tickets", is(0)));
 //    }
 }
