@@ -3,6 +3,8 @@ package cinema.services;
 import cinema.exceptions.IllegalSeatException;
 import cinema.exceptions.UnavailableSeatException;
 import cinema.models.*;
+import cinema.repository.seat.SeatRepo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -17,6 +19,12 @@ public final class CinemaServiceImpl implements CinemaService{
     static {
         cinema = Cinema.getInstance();
         purchases = new HashMap<>();
+    }
+
+    private final SeatRepo _seatRepo;
+
+    public CinemaServiceImpl(@Autowired SeatRepo seatRepo) {
+        _seatRepo = seatRepo;
     }
 
     @Override
