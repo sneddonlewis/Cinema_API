@@ -38,6 +38,7 @@ public class DatabaseLoader implements ApplicationRunner {
             doc.addAttribute("row", seat.getRow());
             doc.addAttribute("column", seat.getColumn());
             doc.addAttribute("price", seat.getPrice());
+            doc.addAttribute("isBooked", false);
             seatClx.insertDocument(doc);
         }
     }

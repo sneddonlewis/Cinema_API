@@ -22,8 +22,8 @@ public class CinemaController {
     }
 
     @GetMapping("/seats")
-    public Cinema getAvailableSeats() {
-        return cinemaService.showCinema();
+    public List<Seat> getAvailableSeats() {
+        return cinemaService.availableSeats();
     }
 
     @GetMapping("/all-seats")

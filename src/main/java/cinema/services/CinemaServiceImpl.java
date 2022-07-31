@@ -40,6 +40,11 @@ public final class CinemaServiceImpl implements CinemaService{
     }
 
     @Override
+    public List<Seat> availableSeats() {
+        return _seatRepo.availableSeats();
+    }
+
+    @Override
     public Ticket purchase(SeatPosition seat) {
         int index = cinema.calculateIndexFromPosition(seat.getRow(), seat.getColumn());
         if (
