@@ -1,4 +1,4 @@
-package cinema.exceptions;
+package cinema.exception;
 
 public class ErrorBody {
     private String error;

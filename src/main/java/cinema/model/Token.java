@@ -1,4 +1,4 @@
-package cinema.models;
+package cinema.model;
 
 import lombok.Getter;
 

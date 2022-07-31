@@ -1,8 +1,8 @@
 package cinema.repository.ticket;
 
-import cinema.models.Refund;
-import cinema.models.SeatPosition;
-import cinema.models.Ticket;
+import cinema.model.Refund;
+import cinema.model.SeatPosition;
+import cinema.model.Ticket;
 
 import java.util.UUID;
 

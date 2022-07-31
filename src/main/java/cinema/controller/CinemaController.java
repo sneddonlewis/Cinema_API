@@ -1,10 +1,10 @@
-package cinema.controllers;
+package cinema.controller;
 
-import cinema.exceptions.ErrorBody;
-import cinema.exceptions.IllegalSeatException;
-import cinema.exceptions.IncorrectPasswordException;
-import cinema.exceptions.UnavailableSeatException;
-import cinema.models.*;
+import cinema.exception.ErrorBody;
+import cinema.exception.IllegalSeatException;
+import cinema.exception.IncorrectPasswordException;
+import cinema.exception.UnavailableSeatException;
+import cinema.model.*;
 import cinema.services.CinemaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

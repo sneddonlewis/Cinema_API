@@ -1,6 +1,6 @@
 package cinema.services;
 
-import cinema.models.*;
+import cinema.model.*;
 
 import java.util.UUID;
 
