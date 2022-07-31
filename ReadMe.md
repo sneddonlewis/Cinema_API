@@ -1,5 +1,14 @@
 # Cinema API
 
+## Description
+
+A booking system for cinema seats through a RESTful web API.
+
+## Dependencies
+
+Java @ 11  
+ArangoDB @ 3.8.0
+
 ## ArangoDB
 
 ArangoDB v3.8.0 is required and can be downloaded [here](https://www.arangodb.com/download-major/) for Windows, Linux and Intel Mac.
