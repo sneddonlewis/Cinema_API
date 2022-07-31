@@ -1,4 +1,4 @@
-package cinema.models;
+package cinema.model;
 
 import lombok.Getter;
 
@@ -12,6 +12,18 @@ public final class Seat {
         this.row = row;
         this.column = column;
         setPrice(row);
+    }
+
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
+    public int getPrice() {
+        return price;
     }
 
     public void setPrice(int row) {

@@ -1,4 +1,4 @@
-package cinema.models;
+package cinema.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -15,6 +15,11 @@ public final class Cinema {
     @Getter
     @JsonProperty("total_columns")
     private final int totalColumns;
+
+    public Seat[] getAvailableSeats() {
+        return availableSeats;
+    }
+
     @Getter
     @JsonProperty("available_seats")
     private Seat[] availableSeats;

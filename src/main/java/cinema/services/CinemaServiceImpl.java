@@ -1,8 +1,8 @@
 package cinema.services;
 
-import cinema.exceptions.IllegalSeatException;
-import cinema.exceptions.UnavailableSeatException;
-import cinema.models.*;
+import cinema.exception.IllegalSeatException;
+import cinema.exception.UnavailableSeatException;
+import cinema.model.*;
 import cinema.repository.seat.SeatRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +29,7 @@ public final class CinemaServiceImpl implements CinemaService{
 
     @Override
     public Cinema showCinema() {
+        _seatRepo.allSeats();
         return cinema;
     }
 

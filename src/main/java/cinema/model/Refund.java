@@ -1,4 +1,4 @@
-package cinema.models;
+package cinema.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

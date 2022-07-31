@@ -1,6 +1,6 @@
 package cinema.repository.seat;
 
-import cinema.models.Seat;
+import cinema.model.Seat;
 
 import java.util.List;
 
