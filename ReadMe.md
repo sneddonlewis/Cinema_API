@@ -9,4 +9,4 @@ If using Apple Silicon, use the following docker image;
 
 `docker run -e ARANGO_ROOT_PASSWORD=root -p 8529:8529 -it arangodb/arangodb:3.9.0-noavx`
 
-Arango web interface can be found [here](localhost:8529/). Login with username: `root` and password: `root`
+Arango web interface can be found at localhost port 8529. Login with username: `root` and password: `root`
