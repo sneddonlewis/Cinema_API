@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -23,6 +24,11 @@ public class CinemaController {
     @GetMapping("/seats")
     public Cinema getAvailableSeats() {
         return cinemaService.showCinema();
+    }
+
+    @GetMapping("/all-seats")
+    public List<Seat> allSeats() {
+        return cinemaService.allSeats();
     }
 
     @RequestMapping(value = "/purchase", method = RequestMethod.POST)

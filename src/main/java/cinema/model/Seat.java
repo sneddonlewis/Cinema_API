@@ -1,5 +1,6 @@
 package cinema.model;
 
+import cinema.repository.seat.SeatEntity;
 import lombok.Getter;
 
 @Getter
@@ -12,6 +13,12 @@ public final class Seat {
         this.row = row;
         this.column = column;
         setPrice(row);
+    }
+
+    public Seat(SeatEntity entity) {
+        this.row = entity.getRow();
+        this.column = entity.getColumn();
+        this.price = entity.getPrice();
     }
 
     public int getRow() {

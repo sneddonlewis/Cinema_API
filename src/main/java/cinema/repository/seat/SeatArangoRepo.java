@@ -9,6 +9,7 @@ import com.arangodb.entity.BaseDocument;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Repository
 public class SeatArangoRepo implements SeatRepo {
@@ -23,9 +24,17 @@ public class SeatArangoRepo implements SeatRepo {
     @Override
     public List<Seat> allSeats() {
         String query = "FOR doc IN Seats RETURN doc";
-        ArangoCursor<BaseDocument> cursor = _db.query(query, null, null, BaseDocument.class);
-        cursor.forEach(aDocument -> System.out.println("Key: " + aDocument.getKey()));
-        return null;
+
+        ArangoCursor<SeatEntity> cursor = _db.query(
+                query,
+                null,
+                null,
+                SeatEntity.class);
+
+        return cursor
+                .stream()
+                .map(Seat::new)
+                .collect(Collectors.toList());
     }
 
     @Override
